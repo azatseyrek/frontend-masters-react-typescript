@@ -3,10 +3,10 @@ import { createPortal } from "react-dom";
 
 const modalRoot = document.getElementById("modal");
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const Modal = ({ children }: { children: ReactNode }) => {
   const elRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   if (!elRef.current) {
-    const x = document.createElement("div")
     elRef.current = document.createElement("div");
   }
 
